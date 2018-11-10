@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1em 1em;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+a {
+  text-decoration: none;
+  color: #161616;
+}
+
+header .container {
+  position: relative;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav .cart {
+  position: relative;
+  width: fit-content;
+}
+
+nav .cart .items-in-cart {
+  position: absolute;
+  top: -10px;
+  right: -20px;
+  background-color: red;
+  border: 1px solid red;
+  border-radius: 50%;
+  padding: 0 0.2em;
+}
+
+header .container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1em 1em;
+  display: block;
+}
+
+.nav-cart {
+  /* padding-top: 1em; */
+  position: absolute;
+  right: 0;
+  background-color: #ccc;
+  width: 300px;
+  overflow-y: scroll;
+  z-index: 999;
+  transition: height 0.5s ease-in-out;
+  height: 0;
+}
+
+.active {
+  height: 200px;
+}
+
+.nav-cart-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 1em;
+  transition: all 0.5s;
+}
+
+.nav-cart-item .img-wrapper {
+  width: 40%;
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+
+.nav-cart-item .description {
+  width: 50%;
+}
+
+nav div {
+  width: 90%;
+}
+
+.selectors {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1em;
+}
+.selectors div {
+  background-color: orange;
+  width: 30px;
+  text-align: center;
+}
+
+.card {
+  width: 20%;
+  height: 280px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+.card:hover .wrapper {
+  transform: translateY(0);
+}
+
+.card figure {
+  width: 100%;
+  height: 100%;
+}
+
+.card figure img {
+  width: 100%;
+  height: 100%;
+}
+
+.card .wrapper {
+  background-color: rgba(255, 187, 0, 0.5);
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  transform: translateY(100%);
+  transition: transform 0.5s ease;
+}
+
+.card .description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1em;
+  padding: 0 0.5em;
+}
+
+.card button {
+  border: none;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  display: block;
+  width: 90%;
+  height: 40px;
+  cursor: pointer;
+}
